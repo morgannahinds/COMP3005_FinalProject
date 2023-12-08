@@ -1,0 +1,77 @@
+--hiring new personal trainer:
+
+INSERT INTO personal_trainer (name, gender)
+VALUES ('Usain Bolt', 'Male');
+
+SELECT * FROM personal_trainer;
+
+INSERT INTO certification
+VALUES (2, 'cardio');
+
+SELECT * FROM certification 
+WHERE trainerid = 2;
+
+
+
+
+
+
+--registering member:
+
+SELECT * FROM Member
+
+INSERT INTO member (name, address, gender) 
+VALUES ('Stephen Curry', '1 Warriors street', 'Male');
+
+SELECT * FROM Member
+
+INSERT INTO emergency_contact
+VALUES ('Ayesha Curry', 3, 'wife', '613-123-4567');
+
+SELECT * FROM emergency_contact 
+WHERE memberid = 3;         
+
+
+
+
+
+
+--get personal trainer for new member:
+
+INSERT INTO trains (memberid, trainerid, hoursperweek)
+VALUES (3, 2, 3);
+
+UPDATE trains 
+SET hoursperweek = 5
+WHERE memberid = 3;
+
+SELECT * FROM trains
+WHERE memberid = 3;
+
+
+
+
+
+
+--register new member for group fitness class:
+
+SELECT * FROM group_fitness_class;
+
+INSERT INTO takes (memberid, title)
+VALUES (3, 'crossfit');
+
+SELECT * FROM takes;
+
+
+
+
+
+
+--register new member for fitness plan:
+
+SELECT * FROM fitness_plan;
+
+INSERT INTO IS_ON (planName, memberID, startWeight, goalWeight)
+VALUES ('Weight Loss', 3, 185, 175);
+
+SELECT * FROM IS_ON;
